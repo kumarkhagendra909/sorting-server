@@ -37,26 +37,14 @@
         function processSequential() {
             document.getElementById('output').innerHTML = "Process Sequential Output";
             const inputArray = JSON.parse(document.getElementById('inputArray').value);
-            consol.log(inputArray)
-            if (!inputArray && inputArray.length == null) {
-                alert("Oops array is EMPTY!!");
-                return;
-            }else {
-                // Change the title of the tab
-                document.title = 'Sorting Result';
-            }
+            
             sendRequest('http://localhost:8000/process-single', { to_sort: inputArray }, displayResult);
         }
 
         function processConcurrent() {
             document.getElementById('output').innerHTML = "Process Concurrent Output";
             const inputArray = JSON.parse(document.getElementById('inputArray').value);
-            if (!inputArray || inputArray.length === 0) {
-                alert("Oops array is EMPTY!!")
-                return;
-            }
-            // Change the title of the tab
-            document.title = 'Sorting Result';
+            
             sendRequest('http://localhost:8000/process-concurrent', { to_sort: inputArray }, displayResult);
         }
 
