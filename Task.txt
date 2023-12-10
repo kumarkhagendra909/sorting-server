@@ -1,0 +1,37 @@
+Assessment Task: Go Server for Sorting Arrays
+Objective:
+Develop a Go server with two endpoints (/process-single and /process-concurrent) to demonstrate your skills in sequential and concurrent processing. The server should sort arrays provided in the request and return the time taken to execute the sorting in both sequential and concurrent manners.
+Requirements:
+	1. Server Setup:
+		1. Create a Go server listening on port 8000
+		2. Implement two endpoints: /process-single for sequential processing and /process-concurrent for concurrent processing.
+	2. Input Format:
+		1. The server should accept a JSON payload with the following structure:
+		{
+		  "to_sort": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+		}
+		2. Each element in the to_sort array is a sub-array that needs to be sorted.
+	3. Task Implementation:
+		1. For the /process-single endpoint, sort each sub-array sequentially.
+		2. For the /process-concurrent endpoint, sort each sub-array concurrently using Go's concurrency features (goroutines, channels).
+	4. Response Format:
+		1. Both endpoints should return a JSON response with the following structure:
+		{
+		  "sorted_arrays": [[sorted_sub_array1], [sorted_sub_array2], ...],
+		  "time_ns": "<time_taken_in_nanoseconds>"
+		}
+	5. Performance Measurement:
+		1. Measure the time taken to sort all sub-arrays in each endpoint in nanoseconds using Go's time package.
+	6. Dockerization:
+		1. Containerize your Go server using Docker.
+		2. Provide a Dockerfile for building the Docker image.
+	7. Submission:
+		1. Push the Docker image to Docker Hub.
+		2. Submit the source code repository link and the Docker Hub link for evaluation.
+	8. Evaluation Criteria:
+		1. Correctness of the sorting implementation in both sequential and concurrent methods.
+		2. Efficiency and performance comparison between the sequential and concurrent implementations.
+		3. Code quality, organization, and adherence to Go best practices.
+		4. Proper Dockerization of the application.
+	9. Code Originality:
+		1. Your submission must be your original work. If your code is found to be similar to that of another candidate, both parties will be disqualified. Please do not share your code with others.

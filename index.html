@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Arrays</title>
+</head>
+
+<body>
+    <h1>Sort Arrays</h1>
+    <div>
+        <label for="inputArray">Input Array:</label>
+        <textarea id="inputArray" rows="3" cols="30" placeholder="[[3, 2, 1], [6, 5, 4], [9, 8, 7]]"></textarea>
+        <button onclick="processSequential()">Sort Sequentially</button>
+        <button onclick="processConcurrent()">Sort Concurrently</button>
+    </div>
+    <div>
+        <h2 id="output">Result:</h2>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function sendRequest(url, data, callback) {
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(result => callback(result))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function processSequential() {
+            document.getElementById('output').innerHTML = "Process Sequential Output";
+            const inputArray = JSON.parse(document.getElementById('inputArray').value);
+            consol.log(inputArray)
+            if (!inputArray && inputArray.length == null) {
+                alert("Oops array is EMPTY!!");
+                return;
+            }else {
+                // Change the title of the tab
+                document.title = 'Sorting Result';
+            }
+            sendRequest('http://localhost:8000/process-single', { to_sort: inputArray }, displayResult);
+        }
+
+        function processConcurrent() {
+            document.getElementById('output').innerHTML = "Process Concurrent Output";
+            const inputArray = JSON.parse(document.getElementById('inputArray').value);
+            if (!inputArray || inputArray.length === 0) {
+                alert("Oops array is EMPTY!!")
+                return;
+            }
+            // Change the title of the tab
+            document.title = 'Sorting Result';
+            sendRequest('http://localhost:8000/process-concurrent', { to_sort: inputArray }, displayResult);
+        }
+
+        function displayResult(result) {
+            document.getElementById('result').innerHTML = JSON.stringify(result, null, 2);
+
+        }
+    </script>
+</body>
+
+</html>
