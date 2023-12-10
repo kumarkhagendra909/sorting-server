@@ -8,6 +8,7 @@ This repository contains a simple Go server that sorts arrays using sequential a
 * Endpoints
 * Performance Measurement
 * Dockerization
+* Reference
 
 # Project Structure
 The project is organized as follows:
@@ -87,3 +88,16 @@ Access the server at http://localhost:8000 and test the endpoints.for /process 
 
 ![Screenshot (814)](https://github.com/kumarkhagendra909/sorting-server/assets/57476268/bdfcaaf5-5cac-42db-95d9-fa10e120eb83)
 
+# Reference
+1. https://go.dev/doc/
+2. https://www.tutorialspoint.com/golang-program-to-sort-an-array
+3. https://www.youtube.com/watch?v=ASBUp7stqjo
+4. https://www.youtube.com/watch?v=T-75j1T8cBY
+5. https://www.youtube.com/watch?v=yyUHQIec83I
+6. https://blog.logrocket.com/creating-a-web-server-with-golang/
+
+# Note to Readers
+This project was undertaken as a learning experience in Go Lang. As I am relatively new to Go, I really don't Know the basics of GO before getting this assessment fore the backend role opportunity at your reputed MapUp, I took the opportunity to explore the language by working on this assessment. I relied on various online resources, articles, and tutorials to grasp the basics and tackle the task at hand.
+I understand that my proficiency in Go might not be on par with more experienced developers, but I've put in dedicated effort to ensure the code aligns with Go best practices and conventions. The intent is not only to provide a solution for the assessment but also to showcase my learning journey.
+Thanks for considering me, and your Time.
+Khagendra Kumar Mandal
