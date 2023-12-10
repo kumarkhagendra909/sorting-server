@@ -1,20 +1,21 @@
 #Go Server for Sorting Array
+
 This repository contains a simple Go server that sorts arrays using sequential and concurrent processing. The server exposes two endpoints, /process-single and /process-concurrent, to demonstrate the efficiency of both methods.
 
 Table of Contents
-• Project Structure
-• Usage
-• Endpoints
-• Performance Measurement
-• Dockerization
+* Project Structure
+* Usage
+* Endpoints
+* Performance Measurement
+* Dockerization
 
 ##Project Structure
 The project is organized as follows:
-• main.go: The main server implementation with endpoint handlers.
-• index.html: HTML file containing a simple user interface to interact with the server.
-• Dockerfile: Instructions for building a Docker image of the server.
-• .dockerfignore: Files and directories to be ignored during Docker image build.
-• go.mod: Go module file where complete go code is written.
+* main.go: The main server implementation with endpoint handlers.
+* index.html: HTML file containing a simple user interface to interact with the server.
+* Dockerfile: Instructions for building a Docker image of the server.
+* .dockerfignore: Files and directories to be ignored during Docker image build.
+* go.mod: Go module file where complete go code is written.
 
 ##Usage
 Clone the repository:
